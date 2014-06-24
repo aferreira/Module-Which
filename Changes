@@ -1,6 +1,7 @@
 Revision history for Perl module Module::Which
 
 0.03 2014-06-24 NEILB
+    - Switched to Dist::Zilla
     - Reformatted this file as per CPAN::Changes::Spec
     - Removed Module::Downgrade, as only aiming to support 5.6+
 

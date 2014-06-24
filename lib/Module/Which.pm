@@ -9,11 +9,6 @@ require Exporter;
 our @ISA = qw( Exporter );
 our @EXPORT = qw( which );
 
-our $VERSION = '0.0207';
-eval $VERSION;
-
-#print "ENTERING Module::Which\n";
-
 #use Module::Find;
 use Module::Which::List qw(list_pm_files);
 use Data::Hash::Transform qw(hash_em);

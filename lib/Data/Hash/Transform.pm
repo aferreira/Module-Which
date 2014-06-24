@@ -9,8 +9,6 @@ require Exporter;
 our @ISA = qw(Exporter);
 our @EXPORT_OK = qw(hash_f hash_l hash_m hash_a hash_em);
 
-our $VERSION = '0.0204';
-
 use Carp qw(croak);
 
 =head1 NAME
