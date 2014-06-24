@@ -2,6 +2,7 @@ Revision history for Perl module Module::Which
 
 0.03 2014-06-24 NEILB
     - Reformatted this file as per CPAN::Changes::Spec
+    - Removed Module::Downgrade, as only aiming to support 5.6+
 
 0.0207 2008-03-05 FERREIRA
     - mention Module::Finder in SEE ALSO

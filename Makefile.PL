@@ -4,19 +4,6 @@ use ExtUtils::MakeMaker;
 
 my $EUMM_VERSION = eval $ExtUtils::MakeMaker::VERSION;
 
-BEGIN {
-    if ($] < 5.006) {
-        print "Downgrading source code from 5.006 to 5.005\n";
-        require lib; lib->import( qw(inc) );
-        require Module::Downgrade; Module::Downgrade->import;
-        downgrade( qw( lib/Module/Which.pm
-                       lib/Module/Which/List.pm
-                       lib/Data/Hash/Transform.pm
-                       bin/which_pm
-        ) );
-    }
-}
-
 WriteMakefile(
     NAME              => 'Module::Which',
     VERSION_FROM      => 'lib/Module/Which.pm', # finds $VERSION
@@ -43,10 +30,6 @@ WriteMakefile(
 recommends:
     Test::Pod:                     1.18
     Term::Size::Any:               0
-no_index:
-    file:
-        - inc/Module/Downgrade.pm
-
 YAML
     ) : () ),
 );
