@@ -61,9 +61,9 @@ sub pm_info {
 
     return { 
         version => $version, 
-        pm => $pm->{pm}, 
-        path => $pm->{path}, 
-        base => $pm->{base}  
+        pm      => $pm->{pm}, 
+        path    => $pm->{path}, 
+        base    => $pm->{base}  
     };
 }
 
@@ -184,8 +184,15 @@ Returns an array ref with information about the modules specified
 (by name or '::*' patterns). This information is a hash ref which
 actually contains:
 
-   pm: (the name of the Perl module)
-   version: (the installed version)
+=over 4
+
+=item * pm: the name of the Perl module
+
+=item * version: the installed version
+
+=item * path: the full path to the Perl module
+
+=back
 
 The version is the one found by accessing the scalar variable C<$VERSION> 
 of the package, after a I<require> statement.
