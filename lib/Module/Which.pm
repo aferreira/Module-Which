@@ -279,6 +279,10 @@ the version is the one of the first file.
 
 Please report bugs via CPAN RT L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Module-Which>.
 
+=head1 REPOSITORY
+
+L<https://github.com/neilbowers/Module-Which>
+
 =head1 AUTHOR
 
 Adriano R. Ferreira, E<lt>ferreira@cpan.orgE<gt>

@@ -4,6 +4,7 @@ Revision history for Perl module Module::Which
     - Fixed the SYNOPSIS to show working code, and the two types of result
       data you can get from which(). RT#16332
     - Clarify in the doc that the return data includes the path to the module.
+    - Added github repo to doc.
     - Switched to Dist::Zilla
     - Reformatted this file as per CPAN::Changes::Spec
     - Removed Module::Downgrade, as only aiming to support 5.6+
