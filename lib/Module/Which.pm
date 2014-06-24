@@ -136,20 +136,38 @@ __END__
 
 =head1 NAME
 
-Module::Which - Finds out which version of Perl modules are installed
+Module::Which - find version and path of locally installed modules
 
 =head1 SYNOPSIS
 
-  use Module::Which;
-  my $info = which('Module::Which', 'YAML', 'XML::', 'DBI', 'DBD::');
-  while (my ($mod, $info) = each %$info) {
-      print "$mod: $info->{version}\n"; 
+  use Module::Which qw/ which /;
+
+  my $result = which('Module::Which', 'YAML', 'XML::', 'DBI', 'DBD::');
+  while (my ($module, $info) = each %$result) {
+      print "$module:\n":
+      print "  version: $info->{version}\n" if $info->{version};
+      print "     path: $info->{path}\n"    if $info->{path}; 
+  }
+
+Or you can request an array ref instead of a hash ref:
+
+  my $result = which('strict', 'YAML', {return => 'ARRAY'});
+
+  foreach my $info (@$result) {
+      print "$info->{pm}:\n":
+      print "  version: $info->{version}\n" if $info->{version};
+      print "     path: $info->{path}\n"    if $info->{path}; 
   }
 
 =head1 DESCRIPTION
 
-C<Module::Which> is the basis of the script C<which_pm> intented
-to show which version of a Perl module is installed (if it is there at all).
+C<Module::Which> provides the C<which()> function, which takes
+the name of one or more modules, and returns information about
+those modules if they're intalled locally, including the version
+and the path.
+
+C<Module::Which> is the basis of the script C<which_pm> which
+displays the retrieved information to STDOUT.
 
 Modules are searched by name (like 'YAML') or by subcategories
 ('DBD::' means all modules under the DBD subdirectories of
