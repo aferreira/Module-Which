@@ -281,7 +281,7 @@ Please report bugs via CPAN RT L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Module
 
 =head1 REPOSITORY
 
-L<https://github.com/neilbowers/Module-Which>
+L<https://github.com/neilb/Module-Which>
 
 =head1 AUTHOR
 
